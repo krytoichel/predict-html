@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('ss.jpg');
+            background-size: cover;
+            font-family: Georgia, serif;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding-top: 50px; /* Расстояние от верхнего края до текста */
+        }
+
+        #prediction {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 1500px;
+            font-style: italic;
+        }
+
+        #titlee{
+            margin-left: 1500px;
+            font-style: italic;
+        }
+    </style>
+    <title>Рандомные предсказания</title>
+</head>
+<body>
+    <h1 id="titlee">Предсказание:</h1>
+    <p id="prediction"></p>
+
+    <script>
+        const predictions = [
+            "Сегодня у вас будет удачный день!",
+            "Ожидайте неожиданного события.",
+            "Постарайтесь быть терпеливым.",
+            "Успешным будет любое начатое дело.",
+            "Год принесет мир и покой.",
+            "Совсем скоро ты встретишь интересного человека.",
+            "За твоей дверью уже стоит счастье.",
+            "Интуиция не подведет тебя в этом году.",
+            "Нужно отдохнуть! Пора выбрать новое хобби.",
+            "Не бойся поступать так, как считаешь нужным.",
+        ];
+
+        // Получаем случайное предсказание
+        const randomPrediction = predictions[Math.floor(Math.random() * predictions.length)];
+
+        // Отображаем предсказание на странице
+        document.getElementById("prediction").textContent = randomPrediction;
+    </script>
+</body>
+</html>
